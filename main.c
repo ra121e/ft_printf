@@ -6,12 +6,12 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:56:17 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 00:18:56 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 01:05:16 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	main(void)
 {

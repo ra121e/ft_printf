@@ -6,11 +6,11 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:59:15 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 00:18:23 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 01:04:59 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printchar(char c)
 {
