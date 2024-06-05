@@ -3,3 +3,5 @@ desktop.ini
 *.exe
 a.out
 test_va.c
+test
+libftprintf.a
