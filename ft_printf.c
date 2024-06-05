@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/05 11:45:29 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/05 13:27:01 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ int	ft_filter(char c, va_list ap)
 {
 	size_t	i;
 
+	i = 0;
 	if (c == 'c')
 	{
 		i = ft_putchar(va_arg(ap, int));

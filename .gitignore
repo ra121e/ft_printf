@@ -2,4 +2,4 @@
 desktop.ini
 *.exe
 a.out
-test.c
+test_va.c
