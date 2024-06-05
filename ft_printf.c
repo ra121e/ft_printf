@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/05 19:50:21 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/05 21:45:00 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,18 @@ int	ft_printstr(char *str)
 	return (i);
 }
 
-int	ft_printpointer(char * p)
+int	ft_printpointer(unsigned long long addrs)
 {
-	int	i;
+	char	*hexabase;
+	int		i;
 
-	i = 0;
+	hexabase = "0123456789abcdef";
+	i = 1;
+	if (addrs > 16)
+	{
+		i = i + ft_printpointer(addrs / 16);
+	}
+	ft_printchar(hexabase[addrs % 16]);
 	return (i);
 }
 
@@ -68,7 +75,34 @@ int	ft_printnbr(int	nb)
 	return (i);
 }
 
+int	ft_printhexa(unsigned int nb, char specifier)
+{
+	char	*hexabase_small;
+	char	*hexabase_big;
+	int		i;
 
+	hexabase_small = "0123456789abcdef";
+	hexabase_big = "0123456789ABCDEF";
+	i = 1;
+	if (nb < 0)
+	{
+		ft_printchar('-');
+		nb = nb * -1;
+	}
+	if (nb > 16)
+	{
+		i = i + ft_printhexa(nb / 16, specifier);
+	}
+	if (specifier == 'x')
+	{
+		ft_printchar(hexabase_small[nb % 16]);
+	}
+	else if (specifier == 'X')
+	{
+		ft_printchar(hexabase_big[nb % 16]);
+	}
+	return (i);
+}
 
 int	ft_filter(char c, va_list ap)
 {
@@ -85,15 +119,22 @@ int	ft_filter(char c, va_list ap)
 	}
 	else if (c == 'p')
 	{
-		i = ft_printpointer(va_arg(ap, char *));
+		ft_printchar('0');
+		ft_printchar('x');
+		i = ft_printpointer(va_arg(ap, unsigned long long));
+		i = i + 2;
 	}
 	else if (c == 'd' || c == 'i')
 	{
 		i = ft_printnbr(va_arg(ap, int));
 	}
-	else if (c == 'x')
+	else if (c == 'u')
 	{
-		i = ft_printhexa(va_arg(ap, unsigned int));
+		i = ft_printnbr(va_arg(ap, unsigned int));
+	}
+	else if (c == 'x' || c == 'X')
+	{
+		i = ft_printhexa(va_arg(ap, unsigned int), c);
 	}
 	return (i);
 }
@@ -139,6 +180,7 @@ int	main(void)
 	int		d;
 	unsigned int	x;
 	unsigned int	u;
+	unsigned int	X;
 
 	c = 'a';
 	printf("-------------------------------------------------\n");
@@ -187,7 +229,7 @@ int	main(void)
 	printf("\n");
 	printf("return of original printf: %ld\n", i);
 	printf("17 means text is 5, and %%, str is 11 \n");
-/*
+
 	p = &c;
 	printf("-------------------------------------------------\n");
 	printf("here is test for char *p\n");
@@ -203,7 +245,7 @@ int	main(void)
 	printf("\n");
 	printf("return of original printf: %ld\n", i);
 	printf("17 means text is 5, and %%, str is 11 \n");
-*/
+
 	d = 1234567;
 	printf("-------------------------------------------------\n");
 	printf("here is test for char *d\n");
@@ -219,5 +261,35 @@ int	main(void)
 	printf("\n");
 	printf("return of original printf: %ld\n", i);
 	printf("17 means text is 5, and %%, str is 11 \n");
+
+	x = 123456;
+	printf("-------------------------------------------------\n");
+	printf("here is test for undigned int x\n");
+	printf("x is number 255, and text is 12345%%x\n");
+	printf("-------------------------------------------------\n");
+	i = ft_printf("12345%x", x);
+	printf("\n");
+	printf("return ft_printf: %ld\n", i);
+
+	printf("------------------------------------\n");
+	printf("here is original printf\n");
+	i = printf("12345%x", x);
+	printf("\n");
+	printf("return of original printf: %ld\n", i);
+
+	X = 2147483647;
+	printf("-------------------------------------------------\n");
+	printf("here is test for undigned int X\n");
+	printf("x is number 2147483647, and text is 12345%%X\n");
+	printf("-------------------------------------------------\n");
+	i = ft_printf("12345%X", X);
+	printf("\n");
+	printf("return ft_printf: %ld\n", i);
+
+	printf("------------------------------------\n");
+	printf("here is original printf\n");
+	i = printf("12345%X", X);
+	printf("\n");
+	printf("return of original printf: %ld\n", i);
 	return (0);
 }
