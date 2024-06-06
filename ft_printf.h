@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:02:58 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:45:53 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 23:43:16 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int	ft_putstr(char *str);
 int	ft_putptr(void *p);
 int	ft_putnbr(int nb);
 int	ft_putunbr(unsigned int nb);
-int	ft_puthexa(unsigned int nb, int hexatype);
+int	ft_puthexa(unsigned long long nb, int hexatype);
 
 #endif // FT_PRINTF_H

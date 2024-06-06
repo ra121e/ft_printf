@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 21:54:01 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:59:45 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 23:33:48 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
  * @return		length of the number
  */
 
-int	ft_puthexa(unsigned int nb, int hexatype)
+int	ft_puthexa(unsigned long long nb, int hexatype)
 {
 	char	*hexabase;
 	int		i;

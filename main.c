@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:56:17 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 23:01:35 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 23:28:19 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,6 @@ void	t_s(void)
 	len = printf("12345%s", str);
 	printf("\n");
 	printf("return of original printf: %ld\n", len);
-	printf("17 means text is 5, and %%, str is 11 \n");
 }
 
 void	t_p(void)
@@ -180,7 +179,6 @@ void	t_p(void)
 	len = printf("12345%p", p);
 	printf("\n");
 	printf("return of original printf: %ld\n", len);
-	printf("17 means text is 5, and %%, str is 11 \n");
 
 }
 
@@ -224,7 +222,6 @@ void	t_d(void)
 	len = printf("12345%d", d);
 	printf("\n");
 	printf("return of original printf: %ld\n", len);
-	printf("17 means text is 5, and %%, str is 11 \n");
 }
 
 void	t_i(void)
@@ -268,7 +265,6 @@ void	t_i(void)
 	len = printf("12345%i", i);
 	printf("\n");
 	printf("return of original printf: %ld\n", len);
-	printf("17 means text is 5, and %%, str is 11 \n");
 }
 
 void	t_u(void)
@@ -299,7 +295,7 @@ void	t_u(void)
         printf("Return values do not match!\n");
     }
 
-	u = 42949672955555;
+	u = 42949672;
 	printf("-------------------------------------------------\n");
 	printf("here is test for unsigned int u\n");
 	printf("d is number 42, and text is 12345%%u\n");
@@ -313,7 +309,6 @@ void	t_u(void)
 	len = printf("12345%u", u);
 	printf("\n");
 	printf("return of original printf: %ld\n", len);
-	printf("17 means text is 5, and %%, str is 11 \n");
 }
 void	t_x(void)
 {
@@ -422,20 +417,19 @@ void	t_mix()
 	len = printf("12345%c7890%s", c, str);
 	printf("\n");
 	printf("return of original printf: %ld\n", len);
-	printf("17 means text is 5, and %%, str is 11 \n");
 }
 int	main(void)
 {
 
-	t_c();
-	t_s();
+//	t_c();
+//	t_s();
 	t_p();
-	t_d();
-	t_i();
-	t_u();
-	t_x();
-	t_X();
-	t_mix();
+//	t_d();
+//	t_i();
+//	t_u();
+//	t_x();
+//	t_X();
+//	t_mix();
 
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 16:04:43 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:11:49 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 23:21:56 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int	ft_putptr(void	*p)
 	int	len;
 	unsigned long long	addrs;
 
+	if (p == NULL)
+	{
+		ft_putstr("(nil)");
+		return (5);
+	}
 	len = 0;
 	addrs = (unsigned long long)p;
 	len = len + ft_putstr("0x");
