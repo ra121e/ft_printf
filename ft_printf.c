@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 09:28:45 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 14:48:34 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_printfilter(char c, va_list ap)
 	}
 	else if (c == 'u')
 	{
-		i = ft_printnbr(va_arg(ap, unsigned int));
+		i = ft_printunbr(va_arg(ap, unsigned int));
 	}
 	else if (c == 'x' || c == 'X')
 	{
