@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:02:58 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 00:17:50 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 14:12:02 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ int	ft_printstr(char *str);
 int	ft_printpointer(unsigned long long addrs);
 int	ft_printnbr(int	nb);
 int	ft_printhexa(unsigned int nb, char specifier);
-int	ft_filter(char c, va_list ap);
+int	ft_printfilter(char c, va_list ap);
 
 #endif // LIBFTPRINTF_H
