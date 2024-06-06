@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:59:15 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 12:05:50 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 12:40:49 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_printpointer(unsigned long long addrs)
 	if (addrs == 0)
 	{
 		ft_printstr("(nil)");
-		return (-1);
+		i = 5;
 	}
 	if (addrs > 16)
 	{
