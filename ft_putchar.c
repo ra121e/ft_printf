@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 20:46:00 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 20:56:56 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 00:14:03 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@
 int	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (c);
+	return ((unsigned char)c);
 }
