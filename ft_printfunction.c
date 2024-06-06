@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:59:15 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 12:40:49 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 14:18:30 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	ft_printpointer(unsigned long long addrs)
 	return (i);
 }
 
-int	ft_printnbr(int	nb)
+int	ft_printnbr(int nb)
 {
 	size_t	i;
 
