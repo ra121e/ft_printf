@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:51:17 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 01:25:04 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,26 @@
 
 int	ft_printf(const char *format, ...)
 {
-	int			i;
-	size_t		index;
-	const char	*ptr;
+	size_t		len;
 	va_list		ap;
-	size_t		count;
 
-	ptr = format;
 	va_start(ap, format);
 	if (ap == NULL)
 		return (-1);
-	index = 0;
-	count = 0;
-	i = 0;
-	while (ptr[i])
+	while (*format)
 	{
-		if (ptr[i] == '%')
+		if (*format == '%')
 		{
-			index = index + ft_printfilter(ptr[i + 1], ap);
-			i++;
+			len = len + ft_printfilter(*(format + 1), ap);
+			format++;
 		}
 		else
 		{
-			ft_putchar(ptr[i]);
-			count++;
+			ft_putchar(*format);
+			len++;
 		}
-		i++;
+		format++;
 	}
 	va_end(ap);
-
-	return (index + count);
+	return (len);
 }
