@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:59:15 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 01:04:59 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 12:05:50 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ int	ft_printstr(char *str)
 {
 	int	i;
 
+	if (str == NULL)
+	{
+		write (1, "(null)", 6);
+		return (6);
+	}
 	i = 0;
 	while (str[i])
 	{
@@ -38,6 +43,11 @@ int	ft_printpointer(unsigned long long addrs)
 
 	hexabase = "0123456789abcdef";
 	i = 1;
+	if (addrs == 0)
+	{
+		ft_printstr("(nil)");
+		return (-1);
+	}
 	if (addrs > 16)
 	{
 		i = i + ft_printpointer(addrs / 16);
