@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 22:02:58 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 14:49:21 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 22:45:53 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@
 # include <stddef.h>
 
 int	ft_printf(const char *format, ...);
-int	ft_printchar(char c);
-int	ft_printstr(char *str);
-int	ft_printpointer(unsigned long long addrs);
-int	ft_printnbr(int nb);
-int	ft_printunbr(unsigned int nb);
-int	ft_printhexa(unsigned int nb, char specifier);
 int	ft_printfilter(char c, va_list ap);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_putptr(void *p);
+int	ft_putnbr(int nb);
+int	ft_putunbr(unsigned int nb);
+int	ft_puthexa(unsigned int nb, int hexatype);
 
 #endif // FT_PRINTF_H

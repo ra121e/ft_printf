@@ -6,13 +6,14 @@
 #    By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/05 22:11:39 by athonda           #+#    #+#              #
-#    Updated: 2024/06/06 00:11:25 by athonda          ###   ########.fr        #
+#    Updated: 2024/06/06 22:49:19 by athonda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=	libftprintf.a
 
-SRCS	=	ft_printf.c ft_printfunction.c
+SRCS	=	ft_printf.c ft_printfilter.c ft_putchar.c ft_putstr.c \
+			ft_putptr.c ft_putnbr.c ft_putunbr.c ft_puthexa.c
 
 OBJS	=	$(patsubst %.c,%.o,$(SRCS))
 

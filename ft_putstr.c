@@ -1,47 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:51:17 by athonda          ###   ########.fr       */
+/*   Created: 2024/06/06 20:58:06 by athonda           #+#    #+#             */
+/*   Updated: 2024/06/06 21:23:25 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @file ft_putstr.c
+ * @brief write string
+ */
+
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
-{
-	int			i;
-	size_t		index;
-	const char	*ptr;
-	va_list		ap;
-	size_t		count;
+/**
+ * @fn int	ft_putstr(char *str)
+ * @brief display string on screen
+ * @param[in]	str string
+ * @return	length of the string
+ */
 
-	ptr = format;
-	va_start(ap, format);
-	if (ap == NULL)
-		return (-1);
-	index = 0;
-	count = 0;
-	i = 0;
-	while (ptr[i])
+int	ft_putstr(char *str)
+{
+	int	i;
+
+	if (str == NULL)
 	{
-		if (ptr[i] == '%')
-		{
-			index = index + ft_printfilter(ptr[i + 1], ap);
-			i++;
-		}
-		else
-		{
-			ft_putchar(ptr[i]);
-			count++;
-		}
+		write (1, "(null)", 6);
+		return (6);
+	}
+	i = 0;
+	while (str[i])
+	{
+		write (1, &str[i], 1);
 		i++;
 	}
-	va_end(ap);
-
-	return (index + count);
+	return (i);
 }
