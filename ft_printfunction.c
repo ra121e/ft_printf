@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:59:15 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 14:18:30 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/06 14:40:17 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,27 +59,30 @@ int	ft_printpointer(unsigned long long addrs)
 int	ft_printnbr(int nb)
 {
 	size_t	i;
+	size_t	case1;
+	size_t	case2;
 
+	case1 = 0;
+	case2 = 0;
 	i = 1;
 	if (nb == -2147483648)
 	{
-		ft_printchar('-');
-		ft_printchar('2');
+		ft_printstr("-2");
 		nb = 147483648;
-		i = 2;
+		case1 = 2;
 	}
 	if (nb < 0)
 	{
 		ft_printchar('-');
 		nb = nb * -1;
-		i = 1;
+		case2 = 1;
 	}
 	if (nb > 10)
 	{
 		i = (ft_printnbr(nb / 10)) + 1;
 	}
 	ft_printchar('0' + nb % 10);
-	return (i);
+	return (i + case1 + case2);
 }
 
 int	ft_printhexa(unsigned int nb, char specifier)
