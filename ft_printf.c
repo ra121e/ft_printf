@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/07 15:17:49 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 15:22:13 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
  * @fn int	ft_printf(const char *format, ...)
  * @brief genarate argument point by va_ series macros, and detect %
  * @param[in]	format	char pointer for the static argument
- * @return 		length of the total text after converting specifier to arges
+ * @return 	length of the total text after converting specifier to arges
  */
 
 int	ft_printf(const char *format, ...)
