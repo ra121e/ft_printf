@@ -6,3 +6,4 @@ test_va.c
 test
 libftprintf.a
 *.o
+/printfTester
