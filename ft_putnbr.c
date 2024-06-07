@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 21:40:41 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:54:30 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 10:16:21 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_putnbr(int nb)
 		nb = nb * -1;
 		case2 = 1;
 	}
-	if (nb > 10)
+	if (nb >= 10)
 	{
 		i = (ft_putnbr(nb / 10)) + 1;
 	}

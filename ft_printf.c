@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/04 20:32:30 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/07 01:25:04 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 10:06:39 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ int	ft_printf(const char *format, ...)
 	va_start(ap, format);
 	if (ap == NULL)
 		return (-1);
+	len = 0;
 	while (*format)
 	{
 		if (*format == '%')

@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/05 21:56:17 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 23:28:19 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 10:09:10 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -336,7 +336,8 @@ void	t_x(void)
         printf("Return values do not match!\n");
     }
 
-	x = 123456;
+	x = 16;
+	len = 0;
 	printf("-------------------------------------------------\n");
 	printf("here is test for undigned int x\n");
 	printf("x is number 255, and text is 12345%%x\n");
@@ -423,11 +424,11 @@ int	main(void)
 
 //	t_c();
 //	t_s();
-	t_p();
+//	t_p();
 //	t_d();
 //	t_i();
 //	t_u();
-//	t_x();
+	t_x();
 //	t_X();
 //	t_mix();
 

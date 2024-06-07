@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 21:48:05 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 22:59:57 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 10:16:32 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_putunbr(unsigned int nb)
 	size_t	i;
 
 	i = 1;
-	if (nb > 10)
+	if (nb >= 10)
 	{
 		i = (ft_putunbr(nb / 10)) + 1;
 	}

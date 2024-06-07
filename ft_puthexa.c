@@ -6,7 +6,7 @@
 /*   By: athonda <athonda@student.42singapore.sg    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/06 21:54:01 by athonda           #+#    #+#             */
-/*   Updated: 2024/06/06 23:33:48 by athonda          ###   ########.fr       */
+/*   Updated: 2024/06/07 10:12:53 by athonda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_puthexa(unsigned long long nb, int hexatype)
 	else
 		hexabase = "0123456789ABCDEF";
 	i = 1;
-	if (nb > 16)
+	if (nb >= 16)
 	{
 		i = i + ft_puthexa(nb / 16, hexatype);
 	}
